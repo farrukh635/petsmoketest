@@ -22,7 +22,7 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class Validate_AddPet {
+public class Validate_AddPet_Test {
 
 	PetDataFactory petDataFactory;
 	@Autowired
