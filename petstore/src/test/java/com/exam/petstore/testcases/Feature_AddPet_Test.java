@@ -37,7 +37,10 @@ public class Feature_AddPet_Test {
 	  public void verify_Add_Pet_To_Store() {
 		  assertNotNull("There is no pet information",pet);
 		  Response response =  RestAssured.given().body(pet).contentType(ContentType.JSON).when().request("POST","/v2/pet");
+		  
+		  
 		  assertEquals("Validation for status code failed.",200,response.getStatusCode());
+		  assertTrue(pet.equals(response.body().as(Pet.class)));
 	  }
 	  
 	  @Test 
